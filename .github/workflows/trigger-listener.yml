@@ -1,0 +1,9 @@
+name: Trigger Listener  
+on:  
+  repository_dispatch:  
+    types:  
+      - trigger-workflow  
+  
+jobs:  
+  trigger-workflow:  
+    uses: ./.github/workflows/build-metrics-report.yml
